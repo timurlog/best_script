@@ -167,6 +167,39 @@ static/build/
 *.tsbuildinfo
 
 # ============================================
+# 🌍 HTML / CSS / JS
+# ============================================
+# Minified files
+*.min.js
+*.min.css
+
+# Source maps
+*.map
+*.js.map
+*.css.map
+
+# Sass/SCSS
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Less
+*.less.map
+
+# Bower
+bower_components/
+
+# Grunt
+.grunt/
+
+# Gulp
+.gulp-*
+
+# Compiled CSS from preprocessors
+*.css.map
+
+# ============================================
 # 🏫 CAMPUS 42
 # ============================================
 # Libft / libraries
