@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 # Define color codes for output messages
 YELLOW="\033[1;33m"
 RED="\033[0;91m"

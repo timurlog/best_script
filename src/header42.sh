@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 # Generates a 42 header for any file type
 # Usage: source header42.sh && generate_42_header "filename" ["user"] ["email"] ["date"]
 

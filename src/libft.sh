@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 # Define color codes for output messages
 YELLOW="\033[1;33m"
 RED="\033[0;91m"
@@ -16,9 +18,9 @@ INSTALL_DIR="$PROJECT_DIR"
 
 # Check if REPO_URL is set
 if [[ -z "$REPO_URL" ]]; then
-    echo -e "${RED}LIBFT_REPO_URL is not set. Please set it in your environment.${RESET}"
-    echo -e "${YELLOW}Example: export LIBFT_REPO_URL=\"git@github.com:user/libft.git\"${RESET}"
-    exit 1
+	echo -e "${RED}LIBFT_REPO_URL is not set. Please set it in your environment.${RESET}"
+	echo -e "${YELLOW}Example: export LIBFT_REPO_URL=\"git@github.com:user/libft.git\"${RESET}"
+	exit 1
 fi
 
 # Functions to ask yes/no questions
@@ -55,7 +57,7 @@ if [[ -d "$INSTALL_DIR/libft" ]]; then
 		exit 0
 	fi
 fi
-cp -r "$TEMP_DIR/libft"/* "$INSTALL_DIR" || { echo -e "${RED}Failed to copy files.${RESET}"; exit 1; }
+cp -r "$TEMP_DIR"/libft/* "$INSTALL_DIR" || { echo -e "${RED}Failed to copy files.${RESET}"; exit 1; }
 
 # Display a success message
 echo -e "${GREEN}Libft installation completed successfully${RESET}"
