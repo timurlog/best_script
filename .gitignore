@@ -1,35 +1,87 @@
-# Ignorer les fichiers objets et binaires
-*.o
-*.a
-*.so
-*.exe
-*.out
-*.elf
+# ============================================
+# 💻 IDE / ÉDITEURS
+# ============================================
+# VSCode
+.vscode/
+*.code-workspace
 
-# Ignorer les fichiers de compilation et de débogage
-*.d
-*.gcda
-*.gcno
-*.gcov
+# JetBrains (CLion, PyCharm, WebStorm)
+.idea/
+*.iml
+*.ipr
+*.iws
 
-# Ignorer les fichiers générés par Make
-Makefile.in
-config.h
-config.log
-config.status
-
-# Ignorer les fichiers temporaires et de sauvegarde
+# Vim / Neovim
 *.swp
 *.swo
+*.swn
 *~
+.netrwhist
+Session.vim
+.undodir/
 
-# Ignorer les dossiers spécifiques à certains outils
-.idea/
-.vscode/
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
 
-# Ignorer les résultats des tests
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# ============================================
+# 🖥️ SYSTÈME
+# ============================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# ============================================
+# 📁 DIVERS
+# ============================================
+# Résultats des tests
 /test_output/
 /test_results/
 
-# Ignorer les logs
+# Logs généraux
 *.log
+
+# Archives
+*.tar
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# Fichiers temporaires
+*.tmp
+*.temp
+*.bak
+*.backup
