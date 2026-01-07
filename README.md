@@ -123,7 +123,7 @@ Execute this Command
 ### The basic syntax is:
 
    ```sh
-   tree [options] [directory]
+   cmd
    ```
 
 ### Options Available in my Best Script Command

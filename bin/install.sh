@@ -31,12 +31,12 @@ trap 'rm -rf "$TEMP_DIR"' EXIT
 
 # Clone the repository into the temporary directory
 echo -e "${YELLOW}Cloning the repository...${RESET}"
-git clone --recursive "$REPO_URL" "$TEMP_DIR/script" > /dev/null 2>&1 || { echo -e "${RED}Failed to clone the repository.${RESET}"; exit 1; }
+git clone --recursive "$REPO_URL" "$TEMP_DIR/.script" > /dev/null 2>&1 || { echo -e "${RED}Failed to clone the repository.${RESET}"; exit 1; }
 
 # Copy the cloned files to the installation directory
 echo -e "${YELLOW}Copying files...${RESET}"
 rm -rf "$INSTALL_DIR"
-cp -r "$TEMP_DIR/script" "$HOME_DIR" || { echo -e "${RED}Failed to copy files.${RESET}"; exit 1; }
+cp -r "$TEMP_DIR/.script" "$HOME_DIR" || { echo -e "${RED}Failed to copy files.${RESET}"; exit 1; }
 
 # # Add an alias to the shell configuration file if it doesn't already exist
 # echo -e "${YELLOW}Adding alias in ${MAGENTA}$RC_FILE${YELLOW}...${RESET}"
@@ -49,7 +49,7 @@ cd "$HOME" || { echo -e "${RED}Unable to return to the home directory.${RESET}";
 rm -rf "$TEMP_DIR" || { echo -e "${RED}Failed to delete the temporary directory.${RESET}"; exit 1; }
 
 # Display a success message
-echo -e "${GREEN}Tree installation completed successfully.${RESET}"
+echo -e "${GREEN}Best Script installation completed successfully.${RESET}"
 
 # Restart the shell to apply changes
 exec "$SHELL"
