@@ -53,15 +53,21 @@ if [[ -d "$PWD_DIR/$PROJECT_NAME" ]]; then
 	exit 1
 fi
 
-read -p "Git repository: " GIT_REPO || { echo -e "${RED}Failed to read input.${RESET}"; exit 1; }
-while [[ -z "${GIT_REPO// }" ]]; do
-	echo -e "${YELLOW}The Git repository cannot be empty.${RESET}"
+if ask_yes_no "Do you want to clone a repository ?"; then
 	read -p "Git repository: " GIT_REPO || { echo -e "${RED}Failed to read input.${RESET}"; exit 1; }
-done
+	while [[ -z "${GIT_REPO// }" ]]; do
+		echo -e "${YELLOW}The Git repository cannot be empty.${RESET}"
+		read -p "Git repository: " GIT_REPO || { echo -e "${RED}Failed to read input.${RESET}"; exit 1; }
+	done
 
-echo -e "${YELLOW}Cloning Repository...${RESET}"
-git clone --recursive "$GIT_REPO" "$PWD_DIR/$PROJECT_NAME" > /dev/null 2>&1 || { echo -e "${RED}Failed to clone the repository.${RESET}"; exit 1; }
-echo -e "${GREEN}Project '$PROJECT_NAME' created successfully.${RESET}"
+	echo -e "${YELLOW}Cloning Repository...${RESET}"
+	git clone --recursive "$GIT_REPO" "$PWD_DIR/$PROJECT_NAME" > /dev/null 2>&1 || { echo -e "${RED}Failed to clone the repository.${RESET}"; exit 1; }
+	echo -e "${GREEN}Project '$PROJECT_NAME' created successfully.${RESET}"
+else
+	echo -e "${YELLOW}Initializing Repository...${RESET}"
+	git init "$PWD_DIR/$PROJECT_NAME" > /dev/null 2>&1 || { echo -e "${RED}Failed to initialize git repository.${RESET}"; exit 1; }
+	echo -e "${GREEN}Project '$PROJECT_NAME' created successfully.${RESET}"
+fi
 
 cd "$PWD_DIR/$PROJECT_NAME" || { echo -e "${RED}Failed to change directory to the new project.${RESET}"; exit 1; }
 
