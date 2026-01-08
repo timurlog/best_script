@@ -86,11 +86,12 @@ if grep -q "^LIBFT_REPO_URL=" "$RC_FILE"; then
 else
 	printf "\nLIBFT_REPO_URL=%s" "$LIBFT_REPO_URL" >> "$RC_FILE"
 fi
-printf "\nexport USER MAIL LIBFT_REPO_URL\n" >> "$RC_FILE"
+if ! grep -Eq "^\s*export.*(USER|MAIL|LIBFT_REPO_URL)" "$RC_FILE"; then
+	printf "\nexport USER MAIL LIBFT_REPO_URL\n" >> "$RC_FILE"
+fi
 
-# Return to the old directory and clean up the temporary directory
+# Return to the old directory
 cd "$PWD_DIR" || { echo -e "${RED}Unable to return to the old directory.${RESET}"; exit 1; }
-rm -rf "$TEMP_DIR" || { echo -e "${RED}Failed to delete the temporary directory.${RESET}"; exit 1; }
 
 # Display a success message
 echo -e "${GREEN}Best Script installation completed successfully.${RESET}"
