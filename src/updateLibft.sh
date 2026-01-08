@@ -33,7 +33,7 @@ mkdir -p "$TEMP_ROOT" || { echo -e "${RED}Failed to create the temporary root di
 CLONE_DIR="$(mktemp -d "${TEMP_ROOT%/}/libft-clone-XXXXXX")" || { echo -e "${RED}Failed to create the temporary clone directory.${RESET}"; exit 1; }
 
 echo -e "${YELLOW}Cloning the libft repository...${RESET}"
-git clone --recursive "$REPO_URL" "$CLONE_DIR" > /dev/null 2>&1 || { echo -e "${RED}Failed to clone the repository.${RESET}"; exit 1; }
+git clone "$REPO_URL" "$CLONE_DIR" > /dev/null 2>&1 || { echo -e "${RED}Failed to clone the repository.${RESET}"; exit 1; }
 
 echo -e "${BLUE}Copying local sources to the clone...${RESET}"
 mkdir -p "$CLONE_DIR/include" || { echo -e "${RED}Failed to create include directory in clone.${RESET}"; exit 1; }

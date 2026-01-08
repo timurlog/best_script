@@ -32,7 +32,7 @@ trap 'rm -rf "$TEMP_DIR"' EXIT
 
 # Clone the repository into the temporary directory
 echo -e "${YELLOW}Cloning the repository...${RESET}"
-git clone --recursive "$REPO_URL" "$TEMP_DIR/.script" > /dev/null 2>&1 || { echo -e "${RED}Failed to clone the repository.${RESET}"; exit 1; }
+git clone "$REPO_URL" "$TEMP_DIR/.script" > /dev/null 2>&1 || { echo -e "${RED}Failed to clone the repository.${RESET}"; exit 1; }
 
 # Copy the cloned files to the installation directory
 echo -e "${YELLOW}Copying files...${RESET}"

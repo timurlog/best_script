@@ -46,7 +46,7 @@ mkdir -p "$TEMP_DIR" || { echo -e "${RED}Failed to create the temporary director
 
 # Clone the repository into the temporary directory
 echo -e "${YELLOW}Cloning the libft repository...${RESET}"
-git clone --recursive "$REPO_URL" "$TEMP_DIR/libft" > /dev/null 2>&1 || { echo -e "${RED}Failed to clone the repository.${RESET}"; exit 1; }
+git clone "$REPO_URL" "$TEMP_DIR/libft" > /dev/null 2>&1 || { echo -e "${RED}Failed to clone the repository.${RESET}"; exit 1; }
 
 # Copy the cloned files to the installation directory
 echo -e "${YELLOW}Copying files...${RESET}"
