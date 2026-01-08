@@ -11,7 +11,7 @@ MAGENTA="\033[0;95m"
 RESET="\033[0m"
 
 # Define variables for repository URL, temporary directory, installation directory, and shell configuration file
-REPO_URL="https://github.com/timurlog/best_script.git"
+REPO_URL="https://github.com/timurlog/42-script-toolbox.git"
 INSTALL_DIR="$HOME/.script"
 HOME_DIR="$HOME"
 PWD_DIR="$(pwd)"

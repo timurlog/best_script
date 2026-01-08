@@ -28,7 +28,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/timurlog/best_script">
+  <a href="https://github.com/timurlog/42-script-toolbox">
     <img src="assets/sh_logo.png" alt="Logo" width="120" height="120">
   </a>
 
@@ -37,7 +37,7 @@
   <p align="center">
 	A collection of my best scripts for coding at 42 Campus
 	<br />
-	<a href="https://github.com/timurlog/best_script"><strong>Explore the docs »</strong></a>
+	<a href="https://github.com/timurlog/42-script-toolbox"><strong>Explore the docs »</strong></a>
 	<br />
 	<br />
   </p>
@@ -161,7 +161,7 @@ Don't forget to give the project a star! Thanks again!
 
 ### Top contributors:
 
-<a href="https://github.com/timurlog/best_script/graphs/contributors">
+<a href="https://github.com/timurlog/42-script-toolbox/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=timurlog/best_script" alt="contrib.rocks image" />
 </a>
 
@@ -183,7 +183,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Timur Logie - [42 Profile](https://profile.intra.42.fr/users/tilogie) - tilogie@student.42belgium.be
 
-Project Link: [https://github.com/timurlog/best_script](https://github.com/timurlog/best_script)
+Project Link: [https://github.com/timurlog/42-script-toolbox](https://github.com/timurlog/42-script-toolbox)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,15 +202,15 @@ Project Link: [https://github.com/timurlog/best_script](https://github.com/timur
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/timurlog/best_script.svg?style=for-the-badge
-[contributors-url]: https://github.com/timurlog/best_script/graphs/contributors
+[contributors-url]: https://github.com/timurlog/42-script-toolbox/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/timurlog/best_script.svg?style=for-the-badge
-[forks-url]: https://github.com/timurlog/best_script/network/members
+[forks-url]: https://github.com/timurlog/42-script-toolbox/network/members
 [stars-shield]: https://img.shields.io/github/stars/timurlog/best_script.svg?style=for-the-badge
-[stars-url]: https://github.com/timurlog/best_script/stargazers
+[stars-url]: https://github.com/timurlog/42-script-toolbox/stargazers
 [issues-shield]: https://img.shields.io/github/issues/timurlog/best_script.svg?style=for-the-badge
-[issues-url]: https://github.com/timurlog/best_script/issues
+[issues-url]: https://github.com/timurlog/42-script-toolbox/issues
 [license-shield]: https://img.shields.io/badge/License-MIT-green?style=for-the-badge
-[license-url]: https://github.com/timurlog/best_script/blob/main/LICENSE.txt
+[license-url]: https://github.com/timurlog/42-script-toolbox/blob/main/LICENSE.txt
 [42]: https://img.shields.io/badge/-Profile-black.svg?style=for-the-badge&logo=42&colorB=555
 [42-url]: https://profile.intra.42.fr/users/tilogie
 [product-screenshot]: assets/screenshot.png
