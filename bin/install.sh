@@ -13,6 +13,7 @@ REPO_URL="https://github.com/timurlog/best_script.git"
 TEMP_DIR="$HOME/temp_____"
 INSTALL_DIR="$HOME/.script"
 HOME_DIR="$HOME"
+PWD_DIR="$(pwd)"
 RC_FILE="$HOME/.zshrc"
 
 # Display a welcome message
@@ -44,8 +45,8 @@ cp -r "$TEMP_DIR/.script" "$HOME_DIR" || { echo -e "${RED}Failed to copy files.$
 #     printf "\nalias tree=%s/tree/tree\n" "$HOME_DIR" >> "$RC_FILE"
 # fi
 
-# Return to the home directory and clean up the temporary directory
-cd "$HOME" || { echo -e "${RED}Unable to return to the home directory.${RESET}"; exit 1; }
+# Return to the old directory and clean up the temporary directory
+cd "$PWD_DIR" || { echo -e "${RED}Unable to return to the old directory.${RESET}"; exit 1; }
 rm -rf "$TEMP_DIR" || { echo -e "${RED}Failed to delete the temporary directory.${RESET}"; exit 1; }
 
 # Display a success message
