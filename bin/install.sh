@@ -40,10 +40,53 @@ rm -rf "$INSTALL_DIR"
 cp -r "$TEMP_DIR/.script" "$HOME_DIR" || { echo -e "${RED}Failed to copy files.${RESET}"; exit 1; }
 
 # # Add an alias to the shell configuration file if it doesn't already exist
-# echo -e "${YELLOW}Adding alias in ${MAGENTA}$RC_FILE${YELLOW}...${RESET}"
-# if ! grep -q "alias tree=" "$RC_FILE"; then
-#     printf "\nalias tree=%s/tree/tree\n" "$HOME_DIR" >> "$RC_FILE"
-# fi
+echo -e "${YELLOW}Adding alias and export in ${MAGENTA}$RC_FILE${YELLOW}...${RESET}"
+if ! grep -q "alias npro=" "$RC_FILE"; then
+	printf "\nalias npro=%s/.script/src/newProject.sh" "$HOME_DIR" >> "$RC_FILE"
+fi
+if ! grep -q "alias alibft=" "$RC_FILE"; then
+	printf "\nalias alibft=%s/.script/src/libft.sh" "$HOME_DIR" >> "$RC_FILE"
+fi
+if ! grep -q "alias acomp=" "$RC_FILE"; then
+	printf "\nalias acomp=%s/.script/src/compiler.sh" "$HOME_DIR" >> "$RC_FILE"
+fi
+if ! grep -q "alias agit=" "$RC_FILE"; then
+	printf "\nalias agit=%s/.script/src/gitignore.sh" "$HOME_DIR" >> "$RC_FILE"
+fi
+if ! grep -q "alias ulibft=" "$RC_FILE"; then
+	printf "\nalias ulibft=%s/.script/src/updateLibft.sh" "$HOME_DIR" >> "$RC_FILE"
+fi
+read -rp "42 Username: " USER || { echo -e "${RED}Failed to read input.${RESET}"; exit 1; }
+while [[ -z "${USER// }" ]]; do
+	echo -e "${YELLOW}The username cannot be empty.${RESET}"
+	read -rp "42 Username: " USER || { echo -e "${RED}Failed to read input.${RESET}"; exit 1; }
+done
+if grep -q "^USER=" "$RC_FILE"; then
+	sed -i "s|^USER=.*|USER=$USER|" "$RC_FILE"
+else
+	printf "\nUSER=%s" "$USER" >> "$RC_FILE"
+fi
+read -rp "42 Mail: " MAIL || { echo -e "${RED}Failed to read input.${RESET}"; exit 1; }
+while [[ -z "${MAIL// }" ]]; do
+	echo -e "${YELLOW}The mail cannot be empty.${RESET}"
+	read -rp "42 Mail: " MAIL || { echo -e "${RED}Failed to read input.${RESET}"; exit 1; }
+done
+if grep -q "^MAIL=" "$RC_FILE"; then
+	sed -i "s|^MAIL=.*|MAIL=$MAIL|" "$RC_FILE"
+else
+	printf "\nMAIL=%s" "$MAIL" >> "$RC_FILE"
+fi
+read -rp "Url libft repository : " LIBFT_REPO_URL || { echo -e "${RED}Failed to read input.${RESET}"; exit 1; }
+while [[ -z "${LIBFT_REPO_URL// }" ]]; do
+	echo -e "${YELLOW}The libft repository URL cannot be empty.${RESET}"
+	read -rp "Url libft repository : " LIBFT_REPO_URL || { echo -e "${RED}Failed to read input.${RESET}"; exit 1; }
+done
+if grep -q "^LIBFT_REPO_URL=" "$RC_FILE"; then
+	sed -i "s|^LIBFT_REPO_URL=.*|LIBFT_REPO_URL=$LIBFT_REPO_URL|" "$RC_FILE"
+else
+	printf "\nLIBFT_REPO_URL=%s" "$LIBFT_REPO_URL" >> "$RC_FILE"
+fi
+printf "\nexport USER MAIL LIBFT_REPO_URL\n" >> "$RC_FILE"
 
 # Return to the old directory and clean up the temporary directory
 cd "$PWD_DIR" || { echo -e "${RED}Unable to return to the old directory.${RESET}"; exit 1; }
