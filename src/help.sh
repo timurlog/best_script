@@ -54,7 +54,6 @@ EOF
     echo -e "${C_RESET}"
     echo -e "             ${C_BOLD}${C_WHITE}T O O L B O X   H E L P E R${C_RESET}"
     echo -e "             ${C_DIM}${C_GRAY}Version ${SCRIPT_VERSION}${C_RESET}\n"
-    echo -e "  ${C_DIM}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${C_RESET}"
 }
 
 # ─────────────────────────────────────────────────────────────────────────────────
@@ -290,8 +289,6 @@ show_command_help() {
 # ─────────────────────────────────────────────────────────────────────────────────
 
 main() {
-    clear
-    
     # Check for specific command help
     if [[ $# -gt 0 ]]; then
         show_command_help "$1"
