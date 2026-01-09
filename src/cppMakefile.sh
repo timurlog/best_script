@@ -84,7 +84,7 @@ WHITE		= \e[0;97m
 #                                  SOURCES                                     #
 # ════════════════════════════════════════════════════════════════════════════ #
 
-SRC_FILES	=	main
+SRC_FILES	=
 
 SRC			= \$(addprefix \$(SRC_DIR), \$(addsuffix .cpp, \$(SRC_FILES)))
 OBJ			= \$(addprefix \$(OBJ_DIR), \$(addsuffix .o, \$(SRC_FILES)))
@@ -106,16 +106,19 @@ all:		\$(NAME)
 
 \$(OBJF):
 			@mkdir -p \$(OBJ_DIR)
+			@touch \$(OBJF)
 
 clean:
 			@\$(RM) -rf \$(OBJ_DIR)
-			@echo "\$(BLUE)✓ Object files cleaned!\$(DEF_COLOR)"
+			@\$(RM) -f \$(OBJF)
+			@echo "\$(BLUE)✓ $PROJECT_NAME object files cleaned!\$(DEF_COLOR)"
 
 fclean:		clean
 			@\$(RM) -f \$(NAME)
-			@echo "\$(CYAN)✓ Executable cleaned!\$(DEF_COLOR)"
+			@echo "\$(CYAN)✓ $PROJECT_NAME executable cleaned!\$(DEF_COLOR)"
 
 re:			fclean all
+			@echo "\$(GREEN)✓ $PROJECT_NAME recompiled!\$(DEF_COLOR)"
 
 .PHONY:		all clean fclean re
 MAKEFILE_EOF
