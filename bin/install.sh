@@ -277,13 +277,16 @@ setup_aliases() {
     log_step "Setting up aliases..."
     
     # Using parallel arrays for compatibility (works in Bash 3.x+)
-    local alias_names=("npro" "alibft" "acomp" "agit" "ulibft")
+    local alias_names=("snew" "slib" "smake" "signore" "spush" "supdate" "shelp" "sversion")
     local alias_cmds=(
         "bash ${INSTALL_DIR}/src/newProject.sh"
         "bash ${INSTALL_DIR}/src/libft.sh"
         "bash ${INSTALL_DIR}/src/compiler.sh"
         "bash ${INSTALL_DIR}/src/gitignore.sh"
         "bash ${INSTALL_DIR}/src/updateLibft.sh"
+		"bash ${INSTALL_DIR}/bin/update.sh"
+		"bash ${INSTALL_DIR}/src/help.sh"
+		"bash ${INSTALL_DIR}/src/version.sh"
     )
     
     local added=0
@@ -326,11 +329,14 @@ show_completion_message() {
     echo -e "  ${C_GREEN}${C_BOLD}${S_ROCKET} Installation Complete!${C_RESET}\n"
     
     echo -e "  ${C_WHITE}Available commands:${C_RESET}"
-    echo -e "    ${C_CYAN}npro${C_RESET}    ${C_DIM}${S_ARROW}${C_RESET} Create a new project"
-    echo -e "    ${C_CYAN}alibft${C_RESET}  ${C_DIM}${S_ARROW}${C_RESET} Add libft to project"
-    echo -e "    ${C_CYAN}acomp${C_RESET}   ${C_DIM}${S_ARROW}${C_RESET} Compile project"
-    echo -e "    ${C_CYAN}agit${C_RESET}    ${C_DIM}${S_ARROW}${C_RESET} Generate .gitignore"
-    echo -e "    ${C_CYAN}ulibft${C_RESET}  ${C_DIM}${S_ARROW}${C_RESET} Update libft"
+    echo -e "    ${C_CYAN}snew${C_RESET}    ${C_DIM}${S_ARROW}${C_RESET} Create a new project"
+    echo -e "    ${C_CYAN}slib${C_RESET}  ${C_DIM}${S_ARROW}${C_RESET} Add libft to project"
+    echo -e "    ${C_CYAN}smake${C_RESET}   ${C_DIM}${S_ARROW}${C_RESET} Compile project"
+    echo -e "    ${C_CYAN}signore${C_RESET}    ${C_DIM}${S_ARROW}${C_RESET} Generate .gitignore"
+    echo -e "    ${C_CYAN}spush${C_RESET}  ${C_DIM}${S_ARROW}${C_RESET} Update libft"
+	echo -e "    ${C_CYAN}supdate${C_RESET}   ${C_DIM}${S_ARROW}${C_RESET} Update the toolbox"
+	echo -e "    ${C_CYAN}shelp${C_RESET}    ${C_DIM}${S_ARROW}${C_RESET} Show help information"
+	echo -e "    ${C_CYAN}sversion${C_RESET}  ${C_DIM}${S_ARROW}${C_RESET} Show toolbox version"
     echo ""
     
     echo -e "  ${C_DIM}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${C_RESET}\n"

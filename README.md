@@ -153,11 +153,14 @@ Execute this Command
 
 | Cmd        | Description                                                               |
 |------------|---------------------------------------------------------------------------|
-| `npro`     | Create a new project from templates and initialize basic files.           |
-| `alibft`   | Add your libft library to the current project.                            |
-| `acomp`    | Generate the project's Makefile and compilation settings.                 |
-| `agit`     | Add a standard .gitignore to the current project.                         |
-| `ulibft`   | Update your libft repo with the libft version located in the current dir. |
+| `snew`     | Create a new project from templates and initialize basic files.           |
+| `slib`     | Add your libft library to the current project.                            |
+| `smake`    | Generate the project's Makefile and compilation settings.                 |
+| `signore`  | Add a standard .gitignore to the current project.                         |
+| `spush`    | Update your libft repo with the libft version located in the current dir. |
+| `supdate`  | Update the toolbox.                                                       |
+| `shelp`    | Show help information.                                                    |
+| `sversion` | Show toolbox version.                                                     |
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
