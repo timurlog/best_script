@@ -358,9 +358,9 @@ main() {
     cd "$original_dir" || true
     
     show_completion_message
-
-    # Restart shell
-    exec "$SHELL"
+    
+    # Just tell user to source their config
+    echo -e "  ${C_YELLOW}Run 'source ~/.zshrc' to apply changes${C_RESET}\n"
 }
 
 main "$@"
