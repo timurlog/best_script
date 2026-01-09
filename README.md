@@ -99,9 +99,9 @@ The goal is to save time on repetitive setup tasks so you can focus on coding.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Here are the steps to follow to install 42 Script Toolbox on your 42 Linux machine.
+Here are the steps to follow to install 42 Script Toolbox on your 42 Linux/macOS machine.
 
-### Linux Installation
+### Linux/macOS Installation
 
 Execute this Command
 
