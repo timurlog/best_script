@@ -293,6 +293,8 @@ verify_exports() {
         log_warning "Missing: ${C_YELLOW}${missing_vars[*]}${C_RESET}"
         log_dim "Run the installer to configure missing variables"
     fi
+
+	return 0
 }
 
 verify_scripts() {
@@ -357,8 +359,10 @@ main() {
     
     show_completion_message
     
-    # Just tell user to source their config
-    echo -e "  ${C_YELLOW}Run 'source ~/.zshrc' to apply changes${C_RESET}\n"
+	cd "$original_dir" || exit 1
+	
+    # Restart shell
+    exec "$SHELL"
 }
 
 main "$@"
