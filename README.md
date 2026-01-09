@@ -232,7 +232,7 @@ Project Link: [https://github.com/timurlog/42-script-toolbox](https://github.com
 [license-url]: https://github.com/timurlog/42-script-toolbox/blob/main/LICENSE.txt
 [42]: https://img.shields.io/badge/-Profile-black.svg?style=for-the-badge&logo=42&colorB=555
 [42-url]: https://profile.intra.42.fr/users/tilogie
-[product-screenshot]: assets/image.png
+[product-screenshot]: assets/demo.gif
 [C]: https://img.shields.io/badge/C-blue?style=for-the-badge&logo=c&logoColor=white
 [C-url]: https://www.c-language.org/ 
 [Makefile]: https://img.shields.io/badge/Makefile-0779c1?style=for-the-badge&logo=gnubash&logoColor=white
