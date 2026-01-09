@@ -216,7 +216,7 @@ spinner() {
         printf "\r  ${C_CYAN}%s${C_RESET} %s" "${spin_chars:i++%${#spin_chars}:1}" "$message"
         sleep 0.1
     done
-    printf "\r%*s\r" $((${#message} + 5)) ""
+    printf "\r\033[K"
 }
 
 # Progress bar (for known iterations)
